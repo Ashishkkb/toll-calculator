@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const tollGuruApiKey = 'qBf68tFd4Dg9L493dhgfLgpM3jgd46tn';
+const tollGuruApiKey = 'MJTb9DF28d98R76hNRqj7P7gDNP7qP6d';
 // const tollGuruApiKey = 'demo'; // Replace with your TollGuru API key
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
