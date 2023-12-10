@@ -6,43 +6,43 @@ const Challenges = () => {
     const CardsData = [
         {
             img: logo1,
-            heading: "Sign Up",
-            body: "Completes all the work associated with planning and processing"
+            heading: "Calculate accurate tolls",
+            body: "Get the most up-to-date tolls considering the vehicle type, toll facility, load type, count of passengers, time of day, pay mode and more"
         },
         {
             img: logo1,
-            heading: "Sign Up",
-            body: "Completes all the work associated with planning and processing"
+            heading: "Trip cost breakdown",
+            body: "Along with tolls, get accurate total trip cost estimates factoring fuel, labour charges, permits, insurance, maintenance, and more."
         },
         {
             img: logo1,
-            heading: "Sign Up",
-            body: "Completes all the work associated with planning and processing"
+            heading: "Demystify toll roads",
+            body: "View toll plaza locations with comprehensive details like payment mode accepted, valid toll tags, toll rates, toll discounts, vehicle compliance etc."
         },
         {
             img: logo1,
-            heading: "Sign Up",
-            body: "Completes all the work associated with planning and processing"
+            heading: "Compare routes",
+            body: "See all logical routes to your destination - while hitting all waypoints - with their trip cost breakdown - tolls, fuel etc., tags required, and travel time."
         },
         {
             img: logo1,
-            heading: "Sign Up",
-            body: "Completes all the work associated with planning and processing"
+            heading: "Optimal compliant route",
+            body: "Travel on the suggested Cheapest or Fastest route calculated considering your vehicle’s compliance to save time or expenses"
         },
         {
             img: logo1,
-            heading: "Sign Up",
-            body: "Completes all the work associated with planning and processing"
+            heading: "Payment methods",
+            body: "Learn about all the accepted payment methods- cash, card, tags etc. and respective toll rates for each plaza to save the highest on tolls."
         },
         {
             img: logo1,
-            heading: "Sign Up",
-            body: "Completes all the work associated with planning and processing"
+            heading: "Notified of incoming tolls",
+            body: "Handy for trips with varying waypoints or contingency plans, the prompt notification of incoming toll plaza with details helps make last-minute saves."
         },
         {
             img: logo1,
-            heading: "Sign Up",
-            body: "Completes all the work associated with planning and processing"
+            heading: "Instant post-trip toll billing",
+            body: "Instead of waiting weeks on tolling agencies to revert with tolls by license plate, get instant tolls using GPS Tracks and Polyline."
         },
     ]
     return (

@@ -8,8 +8,8 @@ import Link from 'next/link';
 const QuestionsAndAnswer = () => {
     return (
         <>
-            <div className="grid grid-rows-2 mx-24 items-center -mt-24">
-                <div className='mx-auto text-6xl font-serif'>
+            <div className="grid grid-rows-2 mx-24 items-center -mt-[150px]">
+                <div className='mx-auto text-6xl font-serif '>
                     Your questions, answered
                 </div>
                 <div className="flex flex-col overflow-x-scroll hide-scrollbar bg-opacity-40 rounded-lg py-6 -mt-40">
