@@ -17,7 +17,7 @@ export interface ICollapsibleProps {
 
 const Collapsible: React.FC<ICollapsibleProps> = ({
   open,
-  collapsibleClassName = "shadow-sm shadow-slate-200 border-[1px] border-[#E4E4E7] rounded-xl mb-3 hover:cursor-pointer mt-5",
+  collapsibleClassName = "border-[1px] border-[#E4E4E7] rounded-xl mb-3 hover:cursor-pointer mt-5 border border-gray-200",
   headerClassName = "flex flex-row items-center justify-between px-4 py-4",
   titleClassName = "font-bold text-lg text-[#2E2E2E] hover:text-blue-600",
   iconButtonClassName = "",
@@ -61,7 +61,7 @@ const Collapsible: React.FC<ICollapsibleProps> = ({
           </div>
         </div>
         <div className={`collapsible-content-edonec ${contentClassName}`} style={{ height }}>
-          <div className="h-[2px] mx-4 mb-2 bg-black"></div>
+          <div className="h-[2px] mx-4 mb-2 bg-blue-400"></div>
           <div ref={ref}>
             <div className={`collapsible-content-padding-edonec ${contentContainerClassName}`}>{children}</div>
           </div>

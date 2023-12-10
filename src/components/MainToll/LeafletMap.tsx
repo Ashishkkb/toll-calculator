@@ -163,7 +163,7 @@ const LeafletMap: React.FC = () => {
                             <div id="leafletMapContainer" className="flex flex-col items-center justify-center space-y-4 p-8 bg-blue-300 bg-opacity-10 rounded-lg shadow-md">
 
                                 {!loading && (
-                                    <MapContainer center={centerCord} zoom={4} className="w-full h-[600px] rounded-lg shadow-md overflow-hidden">
+                                    <MapContainer center={centerCord} zoom={6} className="w-full h-[600px] rounded-lg shadow-md overflow-hidden">
                                         <TileLayer
                                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -187,7 +187,7 @@ const LeafletMap: React.FC = () => {
                     {!loading && (
                         <div className="bg-white rounded-md shadow-md overflow-hidden w-full mt-8">
                             <table className="w-full border-collapse border border-gray-200">
-                                <thead className="bg-gray-200">
+                                <thead className="bg-blue-600 text-white">
                                     <tr>
                                         <th className="py-2 px-4 border">Toll Name</th>
                                         <th className="py-2 px-4 border">Cost</th>
@@ -207,7 +207,7 @@ const LeafletMap: React.FC = () => {
                                         </tr>
                                     ))}
                                     {/* Total Cost Row */}
-                                    <tr className="bg-gray-100">
+                                    <tr className="bg-blue-100">
                                         <td className="py-2 px-4 border font-bold">Total Cost</td>
                                         <td className="py-2 px-4 border font-bold">
                                             INR {markers.reduce((total, marker) => total + marker.tollDetails.cost, 0)}
@@ -271,7 +271,7 @@ const MapForm: React.FC<{ onSubmit: (origin: string, destination: string , vehic
                         onChange={(e) => {
                             setOrigin(e.target.value);
                         }}
-                        className="mt-1 p-3 w-[300px] border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                        className="mt-1 p-3 w-[390px] border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                         required
                         placeholder="Enter origin"
                     />
@@ -296,7 +296,7 @@ const MapForm: React.FC<{ onSubmit: (origin: string, destination: string , vehic
                         onChange={(e) => {
                             setDestination(e.target.value);
                         }}
-                        className="mt-1 p-3 w-[300px] border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                        className="mt-1 p-3 w-[390px] border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                         required
                         placeholder="Enter destination"
                     />
@@ -333,9 +333,9 @@ const MapForm: React.FC<{ onSubmit: (origin: string, destination: string , vehic
             {/* Add more form fields as needed for vehicle details */}
             <button
                 type="submit"
-                className="bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+                className="bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 font-bold"
             >
-                {'Calculate Toll'}
+                {'Calculate'}
             </button>
         </form>
 

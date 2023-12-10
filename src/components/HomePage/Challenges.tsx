@@ -6,57 +6,58 @@ const Challenges = () => {
     const CardsData = [
         {
             img: logo1,
-            heading: "Calculate accurate tolls",
-            body: "Get the most up-to-date tolls considering the vehicle type, toll facility, load type, count of passengers, time of day, pay mode and more"
+            heading: "Accurate Toll Calculations",
+            body: "Receive precise toll estimates considering factors such as vehicle type, toll facility, passenger count, time of day, and payment mode."
         },
         {
             img: logo1,
-            heading: "Trip cost breakdown",
-            body: "Along with tolls, get accurate total trip cost estimates factoring fuel, labour charges, permits, insurance, maintenance, and more."
+            heading: "Comprehensive Trip Cost ",
+            body: "Get detailed trip cost breakdowns, including tolls, fuel expenses, labor charges, permits, insurance, and maintenance costs."
         },
         {
             img: logo1,
-            heading: "Demystify toll roads",
-            body: "View toll plaza locations with comprehensive details like payment mode accepted, valid toll tags, toll rates, toll discounts, vehicle compliance etc."
+            heading: "Explore Toll Roads",
+            body: "Discover toll plaza locations with detailed information on accepted payment modes, valid toll tags, toll rates, discounts, and vehicle compliance."
         },
         {
             img: logo1,
-            heading: "Compare routes",
-            body: "See all logical routes to your destination - while hitting all waypoints - with their trip cost breakdown - tolls, fuel etc., tags required, and travel time."
+            heading: "Route Comparison",
+            body: "Compare logical routes to your destination, including waypoints, trip cost breakdowns (tolls, fuel, etc.), required toll tags, and travel times."
         },
         {
             img: logo1,
-            heading: "Optimal compliant route",
-            body: "Travel on the suggested Cheapest or Fastest route calculated considering your vehicle’s compliance to save time or expenses"
+            heading: "Optimal Compliant Routes",
+            body: "Travel on the suggested cheapest or fastest routes, taking into account your vehicle's compliance to save time or expenses."
         },
         {
             img: logo1,
-            heading: "Payment methods",
-            body: "Learn about all the accepted payment methods- cash, card, tags etc. and respective toll rates for each plaza to save the highest on tolls."
+            heading: "Accepted Payment Methods",
+            body: "Explore all accepted payment methods, including cash, card, toll tags, and respective toll rates for each plaza to optimize toll expenses."
         },
         {
             img: logo1,
-            heading: "Notified of incoming tolls",
-            body: "Handy for trips with varying waypoints or contingency plans, the prompt notification of incoming toll plaza with details helps make last-minute saves."
+            heading: "Real-time Toll Notifications",
+            body: "Receive timely notifications of upcoming toll plazas, ideal for trips with varying waypoints or contingency plans, enabling last-minute adjustments."
         },
         {
             img: logo1,
-            heading: "Instant post-trip toll billing",
-            body: "Instead of waiting weeks on tolling agencies to revert with tolls by license plate, get instant tolls using GPS Tracks and Polyline."
+            heading: "Instant Post-Trip Toll Billing",
+            body: "Avoid waiting for weeks for tolling agencies to provide tolls by license plate. Get instant tolls using GPS tracks and polyline data."
         },
-    ]
+    ];
+    
     return (
         <>
             <div className="grid grid-rows-2 mx-24  items-center">
-                <div className='mx-auto text-6xl font-serif'>
-                        Solve your <span className='font-semibold text-blue-600'>toll challenges</span> within minute
+                <div className='mx-auto text-6xl font-sans'>
+                Overcome Your <span className='font-bold text-blue-500'>Toll Challenges </span>in Minutes
                 </div>
                 <div className='flex flex-row overflow-x-scroll hide-scrollbar bg-opacity-40 rounded-lg py-6 -mt-24 pb-20'>
                     <div className="flex flex-row justify-between gap-4">
                         {CardsData.map((card, index) => (
                             <div
                                 key={index}
-                                className=" bg-white flex flex-col px-10 py-11 rounded-lg items-start w-[370px] hover:scale-105 transition shadow-lg"
+                                className=" bg-white flex flex-col px-10 py-11 rounded-lg items-start w-[370px] hover:scale-105 transition border border-gray-300"
                             >
                                 <Image
                                     loading="lazy"

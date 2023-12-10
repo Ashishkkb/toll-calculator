@@ -8,11 +8,11 @@ import Link from 'next/link';
 const QuestionsAndAnswer = () => {
     return (
         <>
-            <div className="grid grid-rows-2 mx-24 items-center -mt-[150px]">
-                <div className='mx-auto text-6xl font-serif '>
+            <div className="grid grid-rows-2 mx-24 items-center -mt-[80px]">
+                <div className='mx-auto text-6xl font-sans '>
                     Your questions, answered
                 </div>
-                <div className="flex flex-col overflow-x-scroll hide-scrollbar bg-opacity-40 rounded-lg py-6 -mt-40">
+                <div className="flex flex-col overflow-x-scroll hide-scrollbar bg-opacity-40 rounded-lg py-6 -mt-40 mb-20">
                     <Collapsible
                         iconUp={<Plus height="30" width="30" color={"#407EE1"} />}
                         iconDown={<Minus height="30" width="30" color={"#407EE1"} />}

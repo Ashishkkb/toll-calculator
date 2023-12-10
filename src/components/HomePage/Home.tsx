@@ -27,10 +27,10 @@ const HomeMain = () => {
             <div className="">
                 <QuestionsAndAnswer />
             </div>
-            <div className="flag-bg">
+            <div className="bg-blue-600">
                 <Flags />
             </div>
-            <div className="logo-bg">
+            <div className="logo-bg mb-10">
                 <LogosBg />
             </div>
             <div>

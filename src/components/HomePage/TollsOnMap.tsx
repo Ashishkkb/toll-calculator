@@ -1,4 +1,4 @@
-import  Image  from 'next/image';
+import Image from 'next/image';
 import Tolls from "../HomePage/assets/Tolls.svg"
 
 const TollsOnMap = () => {
@@ -6,31 +6,29 @@ const TollsOnMap = () => {
         <>
             <div className="grid grid-cols-2 my-10 mx-24 gap-4 justify-center items-center">
                 <div className='p-16'>
-                    <Image 
-                    src={Tolls}
-                    alt='Toll Image'
+                    <Image
+                        src={Tolls}
+                        alt='Toll Image'
                     />
                 </div>
                 <div className="flex flex-col px-5">
-                    <div className="text-black text-4xl font-extrabold leading-[56px] w-full max-md:max-w-full">
-                        See tolls on any map
+                    <div className="text-black text-5xl font-extrabold leading-[64px] w-full max-md:max-w-full">
+                        Explore Maps with Ease
                     </div>
                     <div className="text-blue-500 text-lg leading-7 w-full mt-9 max-md:max-w-full">
-                        <span className="text-black">Welcome to </span>
-                        <span className="text-blue-500">Toll REST API </span>
-                        <span className="text-black">decision engine that underpins the</span>
-                        <span className="text-blue-500"> Toll calculator.</span>
+                        <span className="text-black">Discover the power of </span>
+                        <span className="text-blue-500">Map Explorer API </span>
+                        <span className="text-black">that fuels our innovative mapping solutions.</span>
+                        <span className="text-blue-500"> Map Explorer API </span>
                         <span className="text-black">
                             {" "}
-                            The Toll API works with all mapping services and is now available for
-                            50+ countries.
+                            seamlessly integrates with your favorite mapping services and is now accessible
+                            in over 60 countries.
                             <br />
-                            It is like having Google Toll API, Bing Toll API, TomTom Toll API or
-                            Mapbox Toll API since you can send routes (polylines) from any of the
-                            mapping services to Toll API and receive tolls for those routes. Since
-                            we support all transponders, it is like querying for EZPass Toll API
-                            or Sunpass Toll API. You will receive tolls specific to all toll tags
-                            and passes throughout the world.
+                            Forget the hassle of multiple APIs – our unified API supports Google Maps, Bing Maps,
+                            TomTom, and Mapbox. Whether you need route information or want to calculate tolls,
+                            our API has you covered. With support for all transponders, {"it's"} like having an EZPass
+                            Toll API or Sunpass Toll API at your fingertips.
                         </span>
                     </div>
                 </div>

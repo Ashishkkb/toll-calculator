@@ -13,7 +13,7 @@ const MainToll = () => {
             <div>
                 <Hero />
             </div>
-            <div>
+            <div className="mb-20">
                 <MyMap />
             </div>
             <div>

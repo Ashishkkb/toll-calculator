@@ -2,10 +2,17 @@ import * as React from "react";
 import facebook from "../HomePage/assets/footerlogo/facebook.svg"
 import insta from "../HomePage/assets/footerlogo/insta.svg"
 import twitter from "../HomePage/assets/footerlogo/twitter.svg"
+import whiteFacebook from "../HomePage/assets/footerlogo/whiteFacebook.svg"
+import whiteInsta from "../HomePage/assets/footerlogo/whiteInsta.svg"
+import whiteTwitter from "../HomePage/assets/footerlogo/whiteTwitter.svg"
 import Image from "next/image";
 
 
 export default function Footer() {
+    const [fflag ,setFflag] = React.useState(false)
+    const [Tflag ,setTflag] = React.useState(false)
+    const [Iflag ,setIflag] = React.useState(false)
+
     return (
         <div className="bg-slate-50 flex flex-col justify-center items-center px-16 py-12 max-md:px-5">
             <div className="flex w-[1172px] max-w-full flex-col mt-9">
@@ -15,30 +22,30 @@ export default function Footer() {
                             RoadFeeWizard
                         </div>
                         <div className="flex items-center justify-between gap-5 mt-6 pr-20 max-md:pr-5">
-                            <div className="bg-white hover:bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center">
+                            <div className="bg-white hover:bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center" onMouseEnter={() => setFflag(true)} onMouseLeave={() => {setFflag(false)}}>
                                 <Image
                                     loading="lazy"
-                                    src={facebook}
-                                    className="rounded-full"
+                                    src={fflag ? whiteFacebook : facebook}
+                                    className=""
                                     alt="Facebook"
                                     width={8}
                                     height={8}
                                 />
                             </div>
-                            <div className="bg-white hover:bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center">
+                            <div className="bg-white hover:bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center" onMouseEnter={() => setIflag(true)} onMouseLeave={() => {setIflag(false)}}>
                                 <Image
                                     loading="lazy"
-                                    src={insta}
+                                    src={Iflag ? whiteInsta : insta}
                                     className=""
                                     alt="Facebook"
                                     width={16}
                                     height={10}
                                 />
                             </div>
-                            <div className="bg-white hover:bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center">
+                            <div className="bg-white hover:bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center" onMouseEnter={() => setTflag(true)} onMouseLeave={() => {setTflag(false)}}>
                                 <Image
                                     loading="lazy"
-                                    src={twitter}
+                                    src={Tflag ? whiteTwitter : twitter}
                                     className=""
                                     alt="Facebook"
                                     width={16}
