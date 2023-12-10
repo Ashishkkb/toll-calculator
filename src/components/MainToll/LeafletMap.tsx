@@ -32,6 +32,17 @@ interface TollDetails {
             coordinates: [number, number];
         };
     };
+    road: string;
+}
+
+interface costDetails {
+    fuel: number
+    tag: number
+    cash: number
+    licensePlate: any
+    prepaidCard: any
+    tagAndCash: number
+    minimumTollCost: number
 }
 
 
@@ -41,6 +52,15 @@ const LeafletMap: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [centerCord, setCenterCord] = useState<LatLngExpression>([22, 77]);
     const [vehicle, setVehicle] = useState("2AxlesTaxi");
+    const [costs, setCosts] = useState<costDetails>({
+        fuel: 14299.8,
+        tag: 710,
+        cash: 1420,
+        licensePlate: null,
+        prepaidCard: null,
+        tagAndCash: 710,
+        minimumTollCost: 710
+    })
 
     const apiKey = 'AIzaSyCtjfTGVOpKNFV73JE770mvc1IKAHvFczg';
 
@@ -86,6 +106,12 @@ const LeafletMap: React.FC = () => {
                 setRoutePolyline(decodedPolyline);
 
                 const tollDetails = result.data.route?.tolls;
+                const costDetails = result.data.route?.costs;
+
+                if (costDetails) {
+                    setCosts(costDetails)
+                }
+
                 if (tollDetails) {
                     const newMarkers: { position: LatLngExpression; tollDetails: TollDetails }[] = [];
 
@@ -107,6 +133,7 @@ const LeafletMap: React.FC = () => {
                                 timestamp_formatted: toll.timestamp_formatted,
                                 timestamp_localized: toll.timestamp_localized,
                                 point: toll.point,
+                                road: toll.road
                             },
                         };
 
@@ -125,7 +152,7 @@ const LeafletMap: React.FC = () => {
         }
     };
 
-    const fetchGooglePolylineData = async (origin: string, destination: string , vehicle: string) => {
+    const fetchGooglePolylineData = async (origin: string, destination: string, vehicle: string) => {
         const originDemo = 'Delhi, India';
         const destinationDemo = 'Bangalore, India';
         setVehicle(vehicle)
@@ -149,7 +176,7 @@ const LeafletMap: React.FC = () => {
             <div className='grid grid-rows-4 my-10 mx-24 gap-10'>
                 <div className='row-span-1 -mt-[200px]'>
                     {/* Form component */}
-                    <MapForm onSubmit={(origin, destination , vehicle) => fetchGooglePolylineData(origin, destination , vehicle)} />
+                    <MapForm onSubmit={(origin, destination, vehicle) => fetchGooglePolylineData(origin, destination, vehicle)} />
                 </div>
                 {loading && <>
                     <div className="spinner flex items-center justify-center">
@@ -193,6 +220,8 @@ const LeafletMap: React.FC = () => {
                                         <th className="py-2 px-4 border">Cost</th>
                                         <th className="py-2 px-4 border">Type</th>
                                         <th className="py-2 px-4 border">Currency</th>
+                                        <th className="py-2 px-4 border">Road</th>
+
                                         {/* Add more table headers as needed */}
                                     </tr>
                                 </thead>
@@ -203,6 +232,8 @@ const LeafletMap: React.FC = () => {
                                             <td className="py-2 px-4 border"> INR {marker.tollDetails.cost}</td>
                                             <td className="py-2 px-4 border">{marker.tollDetails.type}</td>
                                             <td className="py-2 px-4 border">{marker.tollDetails.currency}</td>
+                                            <td className="py-2 px-4 border">{marker.tollDetails.road}</td>
+
                                             {/* Add more table data cells as needed */}
                                         </tr>
                                     ))}
@@ -217,6 +248,20 @@ const LeafletMap: React.FC = () => {
                             </table>
                         </div>
                     )}
+
+
+                    {
+                        !loading && (
+                            <>
+                                <div className="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3 mt-6" role="alert">
+                                    <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z" /></svg>
+                                    <p className='mx-2'>Fuel Cost: INR {costs.fuel!}</p>
+                                    <p className='mx-2'>Tag Cost: INR {costs.tag!}</p>
+                                    <p className='mx-2'>Minimal Toll Cost: INR {costs.minimumTollCost!}</p>
+                                </div>
+                            </>
+                        )
+                    }
                 </div>
             </div>
         </>
@@ -227,7 +272,7 @@ export default LeafletMap;
 
 
 
-const MapForm: React.FC<{ onSubmit: (origin: string, destination: string , vehicle: string) => void }> = ({ onSubmit }) => {
+const MapForm: React.FC<{ onSubmit: (origin: string, destination: string, vehicle: string) => void }> = ({ onSubmit }) => {
     const [origin, setOrigin] = useState<string>('Delhi, India');
     const [destination, setDestination] = useState<string>('Bangalore, India');
     const [vehicle, setVehicle] = useState('');
@@ -246,11 +291,11 @@ const MapForm: React.FC<{ onSubmit: (origin: string, destination: string , vehic
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        onSubmit(origin, destination , vehicle);
+        onSubmit(origin, destination, vehicle);
     };
 
     useEffect(() => {
-        onSubmit(origin, destination , vehicle);
+        onSubmit(origin, destination, vehicle);
     }, [])
 
     return (
