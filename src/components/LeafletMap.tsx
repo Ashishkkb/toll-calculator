@@ -4,7 +4,7 @@ import axios from 'axios';
 import { LatLngExpression } from 'leaflet';
 import { decodePolyline } from '../utils/polylineDecoder';
 import 'leaflet/dist/leaflet.css';
-import fetchGooglePolyline from '@/pages/apiNew/fetchPolyline';
+import fetchGooglePolyline from '@/apiNew/fetchPolyline';
 
 interface TollDetails {
     id: number;
