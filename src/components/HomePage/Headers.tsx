@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Headers = () => {
@@ -9,15 +10,15 @@ const Headers = () => {
                     RoadFeeWizard
                 </div>
                 <div className="self-stretch flex items-start justify-between gap-5 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
-                    <a href="/" className={`${pathname === "/" ? "text-blue-600" : "text-black"} text-base font-bold leading-8 self-center whitespace-nowrap my-auto`}>
+                    <Link href="/" className={`${pathname === "/" ? "text-blue-600" : "text-black"} text-base font-bold leading-8 self-center whitespace-nowrap my-auto`}>
                         Home
-                    </a>
-                    <a href="/tollCalculator" className={`${pathname === "/tollCalculator" ? "text-blue-600" : "text-black"} text-base font-bold leading-8 self-center whitespace-nowrap my-auto`}>
+                    </Link>
+                    <Link href="/tollCalculator" className={`${pathname === "/tollCalculator" ? "text-blue-600" : "text-black"} text-base font-bold leading-8 self-center whitespace-nowrap my-auto`}>
                         Toll Calculator
-                    </a>
-                    <a href="/tollWiki" className={`${pathname === "/tollWiki" ? "text-blue-600" : "text-black"} text-base font-bold leading-8 self-center whitespace-nowrap my-auto`}>
+                    </Link>
+                    <Link href="/tollWiki" className={`${pathname === "/tollWiki" ? "text-blue-600" : "text-black"} text-base font-bold leading-8 self-center whitespace-nowrap my-auto`}>
                         TollWiki
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>

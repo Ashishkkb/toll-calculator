@@ -3,6 +3,7 @@ import Tolls from "../HomePage/assets/Tolls.svg"
 import Collapsible from './Collapsible';
 import Plus from './plus';
 import Minus from './minus';
+import Link from 'next/link';
 
 const QuestionsAndAnswer = () => {
     return (
@@ -78,9 +79,9 @@ const QuestionsAndAnswer = () => {
                             <p>
                                 Calculate routes, tolls, and fuel costs for your travel by car, jeep, van, SUV, truck, LCV, bus, and bike in India using TollGuru Trip Calculator. It also shows the cheapest, fastest, and other optimal routes to your destination along with toll plaza(s) location en route, payment methods, and more.
                             </p>
-                            <a href="/tollCalculator" className="text-blue-600 underline mt-4">
+                            <Link href="/tollCalculator" className="text-blue-600 underline mt-4">
                                 Calculate Toll
-                            </a>
+                            </Link>
                         </div>
                     </Collapsible>
                 </div>
