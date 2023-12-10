@@ -15,20 +15,23 @@ const Flags = () => {
                     <div className='mx-auto  font-sans text-white text-center mt-4 justify-center'>
                         Our Toll API is the right fit for global businesses with complete toll coverage for 50+ countries across North America, Latin America, Europe <br /> (Including Russian Federation), Australia, New Zealand, and India.<br />
                     </div>
-                    <div className="w-max banner">
-                        <Image
-                            src={Flag1}
-                            className="w-max mt-16"
-                            alt={"flag1"}
-                        />
+                    <div className="overflow-x-hidden w-[1500px]">
+                            <div className="w-max banner">
+                                <Image
+                                    src={Flag1}
+                                    className="w-max mt-16"
+                                    alt={"flag1"}
+                                />
+                            </div>
+                            <div className="w-max banner2nd">
+                                <Image
+                                    src={Flag2}
+                                    className="w-max mt-10"
+                                    alt={"flag1"}
+                                />
+                            </div>
                     </div>
-                    <div className="w-max banner2nd">
-                        <Image
-                            src={Flag2}
-                            className="w-max mt-10"
-                            alt={"flag1"}
-                        />
-                    </div>
+
                 </div>
             </div>
         </>
