@@ -6,7 +6,7 @@ import fileInvoice from "../HomePage/assets/cards/fileInvoice.svg"
 import reportMoney from "../HomePage/assets/cards/reportMoney.svg"
 import road from "../HomePage/assets/cards/road.svg"
 import route from "../HomePage/assets/cards/route.svg"
-import vector from "../HomePage/assets/cards/vector.svg"
+import Vector from "../HomePage/assets/cards/Vector.svg"
 import vector2 from "../HomePage/assets/cards/vector2.svg"
 
 const Challenges = () => {
@@ -23,7 +23,7 @@ const Challenges = () => {
             body: "Get detailed trip cost breakdowns, including tolls, fuel expenses, labor charges, permits, insurance, and maintenance costs."
         },
         {
-            img: vector,
+            img: Vector,
             heading: "Explore Toll Roads",
             body: "Discover toll plaza locations with detailed information on accepted payment modes, valid toll tags, toll rates, discounts, and vehicle compliance."
         },
