@@ -2,18 +2,21 @@ import Image from 'next/image';
 import Tolls from "../HomePage/assets/Tolls.svg"
 import logo1 from "../HomePage/assets/cards/logo1.svg"
 import cash from "../HomePage/assets/cards/cash.svg"
+import cal from "../HomePage/assets/cards/cal.svg"
 import fileInvoice from "../HomePage/assets/cards/fileInvoice.svg"
 import reportMoney from "../HomePage/assets/cards/reportMoney.svg"
 import road from "../HomePage/assets/cards/road.svg"
 import route from "../HomePage/assets/cards/route.svg"
 import Vector from "../HomePage/assets/cards/Vector.svg"
 import vector2 from "../HomePage/assets/cards/vector2.svg"
+import Bell_Notification from "../HomePage/assets/cards/Bell_Notification.svg"
+
 
 const Challenges = () => {
 
     const CardsData = [
         {
-            img: logo1,
+            img: cal,
             heading: "Accurate Toll Calculations",
             body: "Receive precise toll estimates considering factors such as vehicle type, toll facility, passenger count, time of day, and payment mode."
         },
@@ -23,32 +26,32 @@ const Challenges = () => {
             body: "Get detailed trip cost breakdowns, including tolls, fuel expenses, labor charges, permits, insurance, and maintenance costs."
         },
         {
-            img: Vector,
+            img: road,
             heading: "Explore Toll Roads",
             body: "Discover toll plaza locations with detailed information on accepted payment modes, valid toll tags, toll rates, discounts, and vehicle compliance."
         },
         {
-            img: vector2,
+            img:  route,
             heading: "Route Comparison",
             body: "Compare logical routes to your destination, including waypoints, trip cost breakdowns (tolls, fuel, etc.), required toll tags, and travel times."
         },
         {
-            img: route,
+            img: reportMoney,
             heading: "Optimal Compliant Routes",
             body: "Travel on the suggested cheapest or fastest routes, taking into account your vehicle's compliance to save time or expenses."
         },
         {
-            img: reportMoney,
+            img:  vector2,
             heading: "Accepted Payment Methods",
             body: "Explore all accepted payment methods, including cash, card, toll tags, and respective toll rates for each plaza to optimize toll expenses."
         },
         {
-            img: fileInvoice,
+            img: Bell_Notification,
             heading: "Real-time Toll Notifications",
             body: "Receive timely notifications of upcoming toll plazas, ideal for trips with varying waypoints or contingency plans, enabling last-minute adjustments."
         },
         {
-            img: road,
+            img: fileInvoice,
             heading: "Instant Post-Trip Toll Billing",
             body: "Avoid waiting for weeks for tolling agencies to provide tolls by license plate. Get instant tolls using GPS tracks and polyline data."
         },
